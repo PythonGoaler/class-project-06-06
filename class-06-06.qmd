@@ -13,6 +13,6 @@ library(primer.data)
 ```{r}
 #| echo: FALSE
 #| warning: FALSE
-connectedness |> ggplot(mapping = aes(x = population, y = connectedness)) + geom_point() + scale_x_log10() + geom_smooth(method = "lm", color = "blue") + labs(title = "US County Populations versus Economic Connectedness", subtitle = "Population size does not matter to EC", x = "Population", y = "Economic Connectedness", caption = "Oppurtunity Insights")
+connectedness |> ggplot(mapping = aes(x = population, y = connectedness)) + geom_point() + scale_x_log10(labels = scales::comma_format()) + geom_smooth(method = "lm", color = "blue") + labs(title = "US County Populations versus Economic Connectedness", subtitle = "Population size does not matter to EC", x = "Population", y = "Economic Connectedness", caption = "Oppurtunity Insights")
 ```
 
